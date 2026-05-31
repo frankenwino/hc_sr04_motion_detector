@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "hc-sr04-detector"
+version = "0.2.0"
+description = "HC-SR04 ultrasonic distance sensor motion detector for Raspberry Pi"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{name = "Andy Browne", email = "andy.maildrop@gmail.com"}]
+keywords = ["raspberry-pi", "hc-sr04", "ultrasonic", "motion-detector"]
+dependencies = ["gpiozero"]
+
+[project.optional-dependencies]
+sound = ["pygame"]
+dev = ["pytest", "pytest-cov", "pytest-mock"]
+
+[project.scripts]
+hc-sr04-detector = "hc_sr04_motion_detector.__main__:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["hc_sr04_motion_detector"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.coverage.run]
+source = ["hc_sr04_motion_detector"]
+omit = ["hc_sr04_motion_detector/__main__.py"]

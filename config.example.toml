@@ -1,0 +1,19 @@
+# HC-SR04 Motion Detector Configuration
+# All values shown are defaults.
+
+[sensor]
+trigger_pin = 23
+echo_pin = 24
+
+[detection]
+distance_threshold_cm = 30.0
+cooldown_seconds = 2.0
+measurement_interval = 0.5
+
+[action]
+type = "log"
+# command = "echo 'detected!'"
+# sound = "/path/to/alert.mp3"
+
+[app]
+log_level = "INFO"

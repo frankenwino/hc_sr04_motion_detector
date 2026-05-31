@@ -1,5 +1,3 @@
-"""Top-level package for HC-SR04 Motion Detector."""
+"""HC-SR04 ultrasonic distance sensor motion detector."""
 
-__author__ = """Andrew Browne"""
-__email__ = 'andy.maildrop@gmail.com'
-__version__ = '0.1.0'
+__version__ = "0.2.0"
